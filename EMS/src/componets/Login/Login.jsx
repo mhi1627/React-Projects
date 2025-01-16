@@ -12,10 +12,6 @@ export default function Login({handleLogin}) {
     const onSubmitHandler = (e)=>{
          e.preventDefault();
         handleLogin(Email,Password)
-        console.log('the email is ' + Email);
-        console.log('the password is ' + Password);
-        
-        
         setEmail('');
         setPassword(''); 
     }

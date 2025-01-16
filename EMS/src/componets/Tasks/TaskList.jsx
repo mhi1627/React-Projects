@@ -11,7 +11,7 @@ import ActiveTask from './ActiveTask'
 export default function TaskList({data}) {
  
  
-  console.log(data);
+  // console.log(data);
   
   return (
     <div id='allTask' className='mt-10 px-5 flex gap-5 flex-nowrap overflow-x-auto '>
@@ -22,19 +22,19 @@ export default function TaskList({data}) {
         
           
        if (task.status.active) {
-        return <ActiveTask taskData={task}></ActiveTask>
+        return <ActiveTask taskData={task}key={index}></ActiveTask>
        }
 
        if(task.status.new) { 
-        return <NewTask taskData={task} ></NewTask>
+        return <NewTask taskData={task} key={index}></NewTask>
       }
 
        if(task.status.completed){
-       return <CompleteTask taskData={task} ></CompleteTask>
+       return <CompleteTask taskData={task} key={index}></CompleteTask>
       }
 
        if(task.status.failed){
-       return <FailedTask taskData={task} ></FailedTask>}
+       return <FailedTask taskData={task} key={index}></FailedTask>}
 
        })
      }

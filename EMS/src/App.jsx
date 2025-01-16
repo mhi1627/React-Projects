@@ -12,8 +12,6 @@ function App() {
 
   useEffect(()=>{
     const savedUser = localStorage.getItem('user');
-   console.log(savedUser);
-   
     if(savedUser) {
      const {type,data} = JSON.parse(savedUser);
      setUser(type);
@@ -40,16 +38,18 @@ function App() {
         localStorage.setItem('user', JSON.stringify({type : 'admin', data : admin}));
         return;
       }
-      
-      
       else {
         alert ("Invalid Credentials ")
       }
      }
-    
+    }
 
-     
-   }
+   const handleLogout = () => {
+    setUser('');
+    setLoggedInUserData('');
+    localStorage.removeItem('user');
+  }
+    
   return (
    <>
    
@@ -57,9 +57,9 @@ function App() {
   {!user ? (
     <Login handleLogin={handleLogin} />
   ) : user === 'admin' ? (
-    <AdminDashboard data={loggedInUserData}  />
+    <AdminDashboard data={loggedInUserData} handleLogout={handleLogout}/>
   ) : (
-    <EmployeeDashboard data={loggedInUserData}  />
+    <EmployeeDashboard data={loggedInUserData} handleLogout={handleLogout}/>
   )}
 </>
     
