@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import {data} from "./Data/data"
 
 export default function App() {
+
+ const [selected,setSelected] = useState(0);
+
  function onButtonClick(){
 
  }
@@ -13,7 +16,7 @@ export default function App() {
     <div className=' p-6 w-1/2'>
      {data.map((e)=>{
       return (
-        <Accordion data={e}></Accordion>
+        <Accordion data={e} selected={selected} setSelected={setSelected}></Accordion>
       )
      })}
      
@@ -24,17 +27,14 @@ export default function App() {
 
 
 
-function Accordion({data}) {
- const [selected,setSelected] = useState();
+function Accordion({data,selected,setSelected}) {
 
  function onClick() {
   
   if(selected){
-    setSelected()
-  }
-  else {
     setSelected(data.id);
   }
+  
  }
   
     return (
