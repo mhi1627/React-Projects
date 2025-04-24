@@ -1,0 +1,42 @@
+
+
+
+
+@media (width>1024px) {
+    .insightCardsHolder{
+       width: 33%;
+       left: 10%;
+       top: 50%;
+    } 
+    
+    .insightsImg{
+        width: 60%;
+        top: 0;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .insightsImg img{
+        width: 80%;
+      
+    }
+}
+
+
+@media (width>1200px) {
+    .insightCardsHolder{
+       width: 33%;
+       left: 10%;
+       top: 50%;
+    } 
+    
+    .insightsImg{
+        width: 60%;
+        top: 0;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .insightsImg img{
+        width: 75%;
+      
+    }
+}

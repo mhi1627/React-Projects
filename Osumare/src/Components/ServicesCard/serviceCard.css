@@ -1,0 +1,42 @@
+.serviceCard {
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+ @media (width < 1320px){
+ .serviceCard {
+    width: 280px;
+    height: 250px;
+ }
+}
+
+ @media (width < 1240px){
+ .serviceCard {
+    width: 250px;
+    height: 250px;
+ }
+}
+ @media (width < 1240px){
+ .serviceCard {
+    width: 250px;
+    height: 250px;
+ }
+}
+ @media (width < 580px){
+ .serviceCard {
+    width: 110px;
+    height: 100px;
+    padding: 6px;
+ }
+}
+ @media (width < 580px){
+ .serviceCard > .cardDescription{
+    display: none; 
+ }
+}

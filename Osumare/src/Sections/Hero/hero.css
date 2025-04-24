@@ -1,0 +1,61 @@
+.hero {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url(./../../assets/backgroundImg.png);
+    background-position: center;
+    object-fit: contain;
+    position: relative;
+}
+
+.hero-bg-round {
+    width: 576px;
+    height: 576px;
+    background: #0077ff20;
+    top: 25%;
+    left: 65%;
+    filter: blur(2rem);
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    animation: movingCircle 20s infinite alternate;
+    
+}
+
+@keyframes movingCircle {
+    0%{
+        top:22%;
+        left:15%
+    }
+    25% {
+        top:1%;
+        left:45% 
+    }
+    50% {
+        top:35%;
+        left:5% 
+    }
+    75% {
+        top:55%;
+        left:4% 
+    }
+    100%{
+        top:22%;
+        left:60%
+    }
+
+}
+
+@media (width < 1025px) {
+    .hero-bg-round {
+        width: 376px;
+        height: 376px;
+        background: #0077ff20;
+        top: 25%;
+        left: 65%;
+        filter: blur(2rem);
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+        animation: none;
+    }
+}
